@@ -1,0 +1,13 @@
+{
+  "name": "mycli",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "test": "./test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "private": true
+}
