@@ -1,5 +1,6 @@
 import parseArgs from "./parser.js";
 import validateArgs from "./validator.js";
+import dispatch from "./dispatcher.js";
 
 
 function main() {
@@ -8,9 +9,10 @@ function main() {
     try {
         const parsedArguments = parseArgs(rest)
         const validatedArguments = validateArgs(parsedArguments)
+        const dispatchedOutput = dispatch(validatedArguments)
 
-        console.log('Parsed arguments:\n')
-        console.log(validatedArguments)
+        console.log(dispatchedOutput)
+
     } catch (error) {
         console.error(`Error: ${error.message}`)
         process.exitCode = 1 
