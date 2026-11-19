@@ -30,6 +30,5 @@ test('CLI exits successfully for a valid greet command', () => {
   
     assert.strictEqual(processResult.status, 0)
     assert.strictEqual(processResult.stderr, '')
-    assert.match(processResult.stdout, /Parsed arguments:/)
-    assert.match(processResult.stdout, /Alice/)
+    assert.strictEqual(processResult.stdout, 'HELLO, ALICE!\nHELLO, ALICE!\nHELLO, ALICE!\n')
 })
